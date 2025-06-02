@@ -5,7 +5,7 @@ import os
 class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     filename = db.Column(db.String(120), nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.now)
     user_id = db.Column(db.String(50))  # Для связи с Firebase UID
 
     def get_path(self):
